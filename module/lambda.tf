@@ -15,4 +15,7 @@ resource "aws_lambda_function" "this" {
   layers           = var.lambda_layers
   filename         = data.archive_file.source_code.output_path
   source_code_hash = data.archive_file.source_code.output_base64sha256
+  tags = {
+    resource_name = var.project_name
+  }
 }

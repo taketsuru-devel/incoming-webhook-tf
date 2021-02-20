@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 module "webhook-lambda" {
-  source = "../module/"
+  source = "../modules/"
 
   project_name = "incoming-webhook-lambda-sample"
   source_file = "src/index.py"
